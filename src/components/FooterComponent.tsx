@@ -1,4 +1,16 @@
-import { Linkedin, Twitter, Mail, ArrowRight, Heart } from 'lucide-react';
+import { Linkedin, Instagram, Mail, ArrowRight, Heart } from 'lucide-react';
+
+// Custom X (Twitter) icon component
+const XIcon = ({ className }: { className?: string }) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    className={className}
+    aria-hidden="true"
+  >
+    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+  </svg>
+);
 
 // Building Blocks Logomark Component
 const LogoMark = ({ className = "w-10 h-10" }: { className?: string }) => (
@@ -10,6 +22,29 @@ const LogoMark = ({ className = "w-10 h-10" }: { className?: string }) => (
     </g>
   </svg>
 );
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/company/zyntohouse/',
+  },
+  {
+    name: 'Instagram',
+    icon: Instagram,
+    href: 'https://www.instagram.com/zyntohouse/',
+  },
+  {
+    name: 'X',
+    icon: XIcon,
+    href: 'https://x.com/zyntohouse',
+  },
+  {
+    name: 'Email',
+    icon: Mail,
+    href: 'mailto:zyntohouse@gmail.com',
+  },
+];
 
 export const FooterComponent = () => {
   return (
@@ -74,27 +109,21 @@ export const FooterComponent = () => {
               Save time. Cut costs. Scale faster.
             </p>
             <div className="flex items-center gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-xl border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-xl border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                aria-label="Twitter"
-              >
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a
-                href="mailto:zyntohouse@gmail.com"
-                className="w-10 h-10 rounded-xl border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                aria-label="Email"
-              >
-                <Mail className="w-5 h-5" />
-              </a>
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target={social.name === 'Email' ? undefined : '_blank'}
+                    rel={social.name === 'Email' ? undefined : 'noopener noreferrer'}
+                    className="w-10 h-10 rounded-xl border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-500 hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+                    aria-label={social.name}
+                  >
+                    <Icon className="w-5 h-5" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 

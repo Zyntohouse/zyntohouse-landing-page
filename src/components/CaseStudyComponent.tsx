@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Clock, Quote, Building2, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2, TrendingUp, Users, Clock, Quote, Building2, ArrowUpRight, Home, FileText, IndianRupee, Send } from 'lucide-react';
 import { Button } from './ui/button';
 
 export const CaseStudyComponent = () => {
@@ -59,7 +59,7 @@ export const CaseStudyComponent = () => {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-foreground">TBK Villas</h3>
-                    <p className="text-zinc-500">Premium Real Estate • Goa, India</p>
+                    <p className="text-zinc-500">Luxury Villa Rentals • Goa, India</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
@@ -72,17 +72,17 @@ export const CaseStudyComponent = () => {
               {/* Before/After Stats Banner */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
                 {[
-                  { label: 'Lead Response', before: '24h', after: '2h', improvement: '12x faster' },
-                  { label: 'Missed Leads', before: '23%', after: '0%', improvement: '100% captured' },
-                  { label: 'Daily Time Saved', before: '0h', after: '3h', improvement: '+3 hours' },
-                  { label: 'Conversion Rate', before: '12%', after: '24%', improvement: '2x increase' },
+                  { label: 'Voucher Creation', before: '15 min', after: '1 click', improvement: 'Instant' },
+                  { label: 'Guest Communication', before: 'Manual', after: 'Auto', improvement: '100% automated' },
+                  { label: 'Daily Time Saved', before: '0h', after: '4h+', improvement: '+4 hours' },
+                  { label: 'Report Generation', before: '2 days', after: '1 click', improvement: 'Instant' },
                 ].map((stat, i) => (
                   <div key={i} className="relative p-4 rounded-xl bg-zinc-800/50 border border-zinc-700/50 group hover:border-primary/30 transition-all duration-300">
                     <p className="text-xs text-zinc-500 mb-3 uppercase tracking-wide">{stat.label}</p>
                     <div className="flex items-baseline gap-2 mb-2">
                       <span className="text-sm text-zinc-600 line-through">{stat.before}</span>
                       <ArrowRight className="w-3 h-3 text-zinc-600" />
-                      <span className="text-2xl font-bold text-foreground">{stat.after}</span>
+                      <span className="text-xl font-bold text-foreground">{stat.after}</span>
                     </div>
                     <span className="text-xs text-primary font-medium">{stat.improvement}</span>
                   </div>
@@ -101,10 +101,11 @@ export const CaseStudyComponent = () => {
                   </div>
                   <ul className="space-y-3">
                     {[
-                      'Leads tracked in Google Sheets',
-                      'Follow-ups constantly missed',
-                      'Zero visibility into pipeline',
-                      'Team overwhelmed with manual work'
+                      'Bookings tracked in Google Sheets',
+                      'Manually creating booking vouchers',
+                      'Manual email & WhatsApp to guests',
+                      'Expenses scattered across files',
+                      'Reports took days to compile'
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-zinc-400 text-sm">
                         <span className="text-red-400 mt-0.5">✗</span>
@@ -120,14 +121,15 @@ export const CaseStudyComponent = () => {
                     <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center">
                       <span className="text-lg">🛠️</span>
                     </div>
-                    <p className="text-sm font-semibold text-primary uppercase tracking-wide">The Solution</p>
+                    <p className="text-sm font-semibold text-primary uppercase tracking-wide">What We Built</p>
                   </div>
                   <ul className="space-y-3">
                     {[
-                      'Custom CRM built for their workflow',
-                      'WhatsApp integration for instant response',
-                      'Automated follow-up sequences',
-                      'Real-time analytics dashboard'
+                      'Internal dashboard with role-based access',
+                      'Custom booking form for their workflow',
+                      'Auto-send voucher via Email & WhatsApp',
+                      'Centralized expense management',
+                      'Finance dashboard with 1-click reports'
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-zinc-400 text-sm">
                         <span className="text-primary mt-0.5">→</span>
@@ -147,10 +149,11 @@ export const CaseStudyComponent = () => {
                   </div>
                   <ul className="space-y-3">
                     {[
-                      'Zero missed leads — ever',
-                      '3+ hours saved every day',
-                      'Full pipeline visibility',
-                      '2x conversion rate'
+                      'Zero manual voucher work',
+                      '4+ hours saved every day',
+                      'All villas managed from one place',
+                      'Instant financial reports',
+                      'Complete operational clarity'
                     ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-zinc-300 text-sm font-medium">
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 flex-shrink-0 mt-0.5" />
@@ -173,7 +176,7 @@ export const CaseStudyComponent = () => {
                   <div className="flex-1 mx-4">
                     <div className="bg-zinc-800 rounded-lg h-7 max-w-sm mx-auto flex items-center px-4">
                       <div className="w-3 h-3 rounded-full bg-green-500/60 mr-2" />
-                      <span className="text-xs text-zinc-400">crm.tbkvillas.com</span>
+                      <span className="text-xs text-zinc-400">dashboard.tbkvillas.com</span>
                     </div>
                   </div>
                   <div className="flex items-center gap-2">
@@ -190,11 +193,11 @@ export const CaseStudyComponent = () => {
                       <div className="w-8 h-8 rounded-lg bg-primary/20 flex items-center justify-center">
                         <span className="text-sm font-bold text-primary">T</span>
                       </div>
-                      <span className="text-sm font-semibold text-foreground">TBK Villas CRM</span>
+                      <span className="text-sm font-semibold text-foreground">TBK Villas Dashboard</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <div className="px-3 py-1.5 rounded-lg bg-primary/20 text-primary text-xs font-medium">
-                        + New Lead
+                        + New Booking
                       </div>
                     </div>
                   </div>
@@ -202,10 +205,10 @@ export const CaseStudyComponent = () => {
                   {/* Stats row */}
                   <div className="grid grid-cols-4 gap-3 mb-6">
                     {[
-                      { label: 'Total Leads', value: '234', icon: Users, change: '+12%', color: 'text-emerald-400' },
-                      { label: 'Active Deals', value: '45', icon: TrendingUp, change: '+8%', color: 'text-emerald-400' },
-                      { label: 'Response Time', value: '2.4h', icon: Clock, change: '-15%', color: 'text-emerald-400' },
-                      { label: 'Conversion', value: '24%', icon: TrendingUp, change: '+5%', color: 'text-emerald-400' },
+                      { label: 'Total Villas', value: '8', icon: Home, change: 'Active', color: 'text-emerald-400' },
+                      { label: 'This Month', value: '24', icon: FileText, change: 'Bookings', color: 'text-emerald-400' },
+                      { label: 'Revenue', value: '₹18.5L', icon: IndianRupee, change: '+22%', color: 'text-emerald-400' },
+                      { label: 'Auto-Sent', value: '100%', icon: Send, change: 'Vouchers', color: 'text-emerald-400' },
                     ].map((stat, i) => {
                       const Icon = stat.icon;
                       return (
@@ -221,19 +224,32 @@ export const CaseStudyComponent = () => {
                     })}
                   </div>
 
-                  {/* Chart */}
+                  {/* Recent Bookings Table */}
                   <div className="p-4 rounded-xl bg-zinc-800/30 border border-zinc-700/50">
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-sm font-medium text-zinc-400">Lead Activity</span>
-                      <span className="text-xs text-zinc-600">Last 30 days</span>
+                      <span className="text-sm font-medium text-zinc-400">Recent Bookings</span>
+                      <span className="text-xs text-zinc-600">Auto-voucher sent ✓</span>
                     </div>
-                    <div className="h-24 flex items-end justify-between gap-1.5">
-                      {[40, 65, 45, 80, 55, 70, 90, 60, 75, 85, 50, 95, 70, 80, 65].map((height, i) => (
-                        <div
-                          key={i}
-                          className="flex-1 bg-gradient-to-t from-primary/40 to-primary/80 rounded-sm transition-all hover:from-primary/60 hover:to-primary"
-                          style={{ height: `${height}%` }}
-                        />
+                    <div className="space-y-2">
+                      {[
+                        { guest: 'Amit Patel', villa: 'Villa Serenity', dates: 'Jan 25-28', status: 'Confirmed', statusColor: 'text-emerald-400 bg-emerald-400/10' },
+                        { guest: 'Priya Sharma', villa: 'Villa Horizon', dates: 'Jan 26-30', status: 'Voucher Sent', statusColor: 'text-primary bg-primary/10' },
+                        { guest: 'Rahul Mehta', villa: 'Villa Paradise', dates: 'Feb 1-5', status: 'Pending', statusColor: 'text-yellow-400 bg-yellow-400/10' },
+                      ].map((booking, i) => (
+                        <div key={i} className="flex items-center justify-between p-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-800 transition-colors">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-zinc-700 flex items-center justify-center">
+                              <span className="text-xs font-bold text-zinc-300">{booking.guest[0]}</span>
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-foreground">{booking.guest}</p>
+                              <p className="text-xs text-zinc-500">{booking.villa} • {booking.dates}</p>
+                            </div>
+                          </div>
+                          <span className={`px-2 py-1 rounded-full text-xs font-medium ${booking.statusColor}`}>
+                            {booking.status}
+                          </span>
+                        </div>
                       ))}
                     </div>
                   </div>
@@ -245,15 +261,16 @@ export const CaseStudyComponent = () => {
                 <Quote className="w-10 h-10 text-primary/30 flex-shrink-0" />
                 <div>
                   <p className="text-lg text-zinc-300 italic mb-4">
-                    "They understood our business better than we did. The tool they built literally{' '}
-                    <span className="text-primary font-medium not-italic">transformed how we operate.</span>"
+                    "Earlier I used to spend hours on vouchers and WhatsApp messages. Now{' '}
+                    <span className="text-primary font-medium not-italic">one click and it's done.</span>{' '}
+                    This dashboard has genuinely transformed how we run TBK Villas."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-zinc-700 flex items-center justify-center">
-                      <span className="text-sm font-bold text-zinc-300">R</span>
+                      <span className="text-sm font-bold text-zinc-300">J</span>
                     </div>
                     <div>
-                      <p className="text-sm font-semibold text-foreground">Rahul Sharma</p>
+                      <p className="text-sm font-semibold text-foreground">Jairaj Kamani</p>
                       <p className="text-xs text-zinc-500">Founder, TBK Villas</p>
                     </div>
                   </div>
@@ -266,13 +283,11 @@ export const CaseStudyComponent = () => {
                   Want similar results for your business?
                 </p>
                 <div className="flex items-center gap-3">
-                  <Button variant="hero-outline" className="group">
-                    See Full Case Study
-                    <ArrowUpRight className="ml-2 h-4 w-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                  </Button>
-                  <Button variant="hero" className="group">
-                    Book a Call
-                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button variant="hero" className="group" asChild>
+                    <a href="tel:+919875338181">
+                      Book a Call
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </div>
               </div>

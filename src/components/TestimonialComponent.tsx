@@ -3,15 +3,15 @@ import { useState } from 'react';
 
 const testimonials = [
   {
-    quote: "They understood our business better than we did. The tool they built literally transformed how we operate.",
-    highlight: "transformed how we operate",
-    name: "Rahul Sharma",
+    quote: "Earlier I used to spend hours on vouchers and WhatsApp messages. Now one click and it's done. This dashboard has genuinely transformed how we run TBK Villas.",
+    highlight: "one click and it's done",
+    name: "Jairaj Kamani",
     role: "Founder",
     company: "TBK Villas",
-    industry: "Real Estate",
-    avatar: "R",
+    industry: "Luxury Villa Rentals",
+    avatar: "J",
     rating: 5,
-    results: "3hrs saved daily",
+    results: "4hrs saved daily",
   },
   {
     quote: "We went from chaos to complete clarity in just 3 weeks. Our team actually enjoys using the CRM now.",

@@ -104,8 +104,8 @@ export const NavbarComponent = () => {
 
             {/* CTA Button */}
             <div className="hidden lg:block">
-              <Button variant="hero" size="default" className="shadow-lg shadow-primary/20">
-                Book a Call
+              <Button variant="hero" size="default" className="shadow-lg shadow-primary/20" asChild>
+                <a href="tel:+919875338181">Book a Call</a>
               </Button>
             </div>
 
@@ -150,9 +150,11 @@ export const NavbarComponent = () => {
                   variant="hero"
                   size="lg"
                   className="w-full"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  asChild
                 >
-                  Book a Call
+                  <a href="tel:+919875338181" onClick={() => setIsMobileMenuOpen(false)}>
+                    Book a Call
+                  </a>
                 </Button>
               </div>
             </div>

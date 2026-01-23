@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Send, Phone, Clock, CheckCircle2, MessageSquare, Linkedin, Twitter, Calendar } from 'lucide-react';
+import { Mail, Send, Phone, Clock, CheckCircle2, MessageSquare, Linkedin, Twitter, Instagram, Calendar, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
@@ -9,6 +9,24 @@ const benefits = [
   { icon: Clock, text: 'Response within 24 hours' },
   { icon: CheckCircle2, text: 'Free discovery call' },
   { icon: MessageSquare, text: 'No hard selling, ever' },
+];
+
+const socialLinks = [
+  {
+    name: 'LinkedIn',
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/company/zyntohouse/',
+  },
+  {
+    name: 'Instagram',
+    icon: Instagram,
+    href: 'https://www.instagram.com/zyntohouse/',
+  },
+  {
+    name: 'X',
+    icon: X,
+    href: 'https://x.com/zyntohouse',
+  },
 ];
 
 export const ContactComponent = () => {
@@ -119,18 +137,21 @@ export const ContactComponent = () => {
             <div className="flex items-center gap-4">
               <span className="text-sm text-zinc-500">Follow us:</span>
               <div className="flex items-center gap-2">
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-lg border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary/30 transition-all"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="#"
-                  className="w-10 h-10 rounded-lg border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary/30 transition-all"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Follow us on ${social.name}`}
+                      className="w-10 h-10 rounded-lg border border-zinc-800 bg-zinc-900/50 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary/30 transition-all"
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  );
+                })}
               </div>
             </div>
           </div>

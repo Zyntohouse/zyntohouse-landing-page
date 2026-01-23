@@ -63,13 +63,17 @@ export const HeroComponent = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 fade-in-up stagger-2">
-              <Button variant="hero" size="xl" className="group">
-                Book a Call
-                <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              <Button variant="hero" size="xl" className="group" asChild>
+                <a href="tel:+919875338181">
+                  Book a Call
+                  <ArrowRight className="ml-1 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
-              <Button variant="hero-outline" size="xl" className="group">
-                <Play className="mr-1 h-4 w-4 text-primary" />
-                See Our Work
+              <Button variant="hero-outline" size="xl" className="group" asChild>
+                <a href="#case-study">
+                  <Play className="mr-1 h-4 w-4 text-primary" />
+                  See Our Work
+                </a>
               </Button>
             </div>
 
