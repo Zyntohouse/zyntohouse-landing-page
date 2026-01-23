@@ -1,4 +1,4 @@
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Clock, Quote, Building2, ArrowUpRight, Home, FileText, IndianRupee, Send } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Quote, Building2, Home, FileText, IndianRupee, Send } from 'lucide-react';
 import { Button } from './ui/button';
 
 export const CaseStudyComponent = () => {
