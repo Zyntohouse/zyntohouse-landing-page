@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Send, Phone, Clock, CheckCircle2, MessageSquare, Linkedin, Twitter, Instagram, Calendar, X } from 'lucide-react';
+import { Mail, Send, Phone, Clock, CheckCircle2, MessageSquare, Linkedin, Instagram, Calendar, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
